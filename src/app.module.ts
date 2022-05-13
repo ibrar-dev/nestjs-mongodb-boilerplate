@@ -3,12 +3,15 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './app/users/users.module';
+import { CodesModule } from './app/codes/codes.module';
+
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://test:nvig8_password@cluster0.eyo5d.mongodb.net/test'
+      'mongodb+srv://nvig8_user:nvig8_password@cluster0.eyo5d.mongodb.net/navig8_db'
     ),
-    UsersModule
+    UsersModule,
+    CodesModule
 
   ],
   controllers: [AppController],
